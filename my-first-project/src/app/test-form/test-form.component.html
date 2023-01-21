@@ -1,0 +1,63 @@
+<div class="wrapper">
+  <div class="wrapper__container">
+    <form [formGroup]="form" (submit)="onSubmit()" class="test__form">
+      <div class="user_initials">
+        <h1>Full name <span class="red">*</span ></h1>
+          <img src="/assets/logo.svg" alt="">
+       <div class="input__block-horizontal">
+          <div class="column">
+            <input formControlName="first_name"  type="text" class="name">
+            <span class="tip">First name</span>
+          </div>
+         <div class="column">
+            <input formControlName="last_name" type="text" class="name">
+            <span class="tip">Last name</span>
+       </div >
+        </div>
+      </div>
+      <div class="user__adress">
+        <h1>Adress <span class="red">*</span></h1>
+        <div class="input__block-vertical">
+          <div class="column">
+            <input formControlName="street" type="text" class="adress">
+            <span class="tip">Street adress</span>
+          </div>
+          <div class="column">
+            <input formControlName="street_2" type="text" class="adress">
+            <span class="tip">Street adress Line 2</span>
+          </div>
+          <div class="input__block-horizontal">
+            <div class="column">
+              <input formControlName="city" type="text" class="name">
+              <span class="tip">City</span>
+            </div>
+           <div class="column">
+              <input formControlName="state" type="text" class="lastname">
+              <span class="tip">State / Province</span>
+            </div>
+          </div>
+          <div class="column">
+            <input formControlName="postal_code" type="text" class="adress">
+            <span class="tip">Postal / Zip Code</span>
+          </div>
+        </div>
+      </div>
+      <div class="user__contact">
+        <div class="input__block-vertical">
+          <h1>Phone Number <span class="red">*</span></h1>
+          <div class="column">
+            <input formControlName="phone_num" placeholder="(000) 000-0000" type="number">
+          </div>
+          <h1>E-mail</h1>
+          <div class="column">
+            <input formControlName="email" placeholder="ex: email@yahoo.com" type="email">
+            <span class="red" *ngIf="form.get('email')?.invalid && form.value.email">* Please write correct E-mail </span>
+            <span class="tip">example@example.com</span>
+          </div>
+        </div>
+      </div>
+      <button class="submit__btn" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
