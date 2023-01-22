@@ -1,16 +1,16 @@
 <div class="wrapper">
   <div class="wrapper__container">
+  <img class="logo" src="/assets/logo.svg" alt="">
     <form [formGroup]="form" (submit)="onSubmit()" class="test__form">
       <div class="user_initials">
         <h1>Full name <span class="red">*</span ></h1>
-          <img src="/assets/logo.svg" alt="">
        <div class="input__block-horizontal">
-          <div class="column">
+          <div class="flex_50 column">
             <input formControlName="first_name"  type="text" class="name">
             <span class="tip">First name</span>
           </div>
-         <div class="column">
-            <input formControlName="last_name" type="text" class="name">
+         <div class="flex_50 column">
+            <input formControlName="last_name" type="text" class="last_name">
             <span class="tip">Last name</span>
        </div >
         </div>
@@ -27,12 +27,12 @@
             <span class="tip">Street adress Line 2</span>
           </div>
           <div class="input__block-horizontal">
-            <div class="column">
-              <input formControlName="city" type="text" class="name">
+            <div class="flex_50 column">
+              <input formControlName="city" type="text" class=" city">
               <span class="tip">City</span>
             </div>
-           <div class="column">
-              <input formControlName="state" type="text" class="lastname">
+           <div class="flex_50 column">
+              <input formControlName="state" type="text" class=" state">
               <span class="tip">State / Province</span>
             </div>
           </div>
