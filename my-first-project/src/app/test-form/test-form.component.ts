@@ -32,6 +32,6 @@ export class TestFormComponent {
       return;
     }
     console.log(this.form.value)
-
+    this.form.reset()
   }
 }
